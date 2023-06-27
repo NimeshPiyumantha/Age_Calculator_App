@@ -10,6 +10,7 @@ const AgeCalculatorForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("button sibmit");
   };
 
   return (

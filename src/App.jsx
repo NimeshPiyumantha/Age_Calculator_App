@@ -3,10 +3,14 @@ import AgeResult from "./components/AgeResult";
 
 function App() {
 
+    const calculateAge = () => {
+      console.log("cal age");
+    }
+
   return (
     <>
       <h1>Age Calculator</h1>
-      <AgeCalculatorForm/>
+      <AgeCalculatorForm calculateAge={calculateAge} />
       <AgeResult/>
     </>
   );
