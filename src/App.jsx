@@ -1,11 +1,9 @@
 function App() {
-
-
   return (
-    <>
-     <div>hi</div>
-    </>
-  )
+    <div>
+      <h1>Age Calculator</h1>
+    </div>
+  );
 }
 
-export default App
+export default App;
