@@ -1,7 +1,18 @@
-import React from "react";
+import { useState } from "react";
 
 const AgeCalculatorForm = () => {
-  return <div>AgeCalculatorForm</div>;
+  const [birthDate, setBirthDate] = useState("");
+
+  const handleChangeDate = (e) => {
+    setBirthDate(e.target.value);
+  };
+
+  return (
+    <form>
+      <input value={birthDate} type="date" onChange={handleChangeDate} />
+      <button>Calculate Age</button>
+    </form>
+  );
 };
 
 export default AgeCalculatorForm;
