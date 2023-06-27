@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AgeCalculatorForm = () => {
-  return (
-    <div>
-      AgeCalculatorForm
-    </div>
-  )
-}
+  return <div>AgeCalculatorForm</div>;
+};
 
-export default AgeCalculatorForm
+export default AgeCalculatorForm;
