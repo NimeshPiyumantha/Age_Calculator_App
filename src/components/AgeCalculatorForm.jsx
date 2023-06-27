@@ -2,15 +2,20 @@ import { useState } from "react";
 
 const AgeCalculatorForm = () => {
   const [birthDate, setBirthDate] = useState("");
+  console.log(birthDate);
 
   const handleChangeDate = (e) => {
     setBirthDate(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input value={birthDate} type="date" onChange={handleChangeDate} />
-      <button>Calculate Age</button>
+      <button type="submit">Calculate Age</button>
     </form>
   );
 };
