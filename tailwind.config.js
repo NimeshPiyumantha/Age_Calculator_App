@@ -19,6 +19,11 @@ export default {
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
+    fontFamily: {
+      Pooppins: ["Poppins", "sans-serif"],
+      Roboto: ["Roboto", "sans-serif"],
+      Ubuntu: ["Ubuntu", "sans-serif"],
+    },
   },
   plugins: [],
 };
