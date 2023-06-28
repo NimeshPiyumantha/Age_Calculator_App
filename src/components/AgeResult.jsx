@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const AgeResult = ({ age }) => {
   return (
-    <h4 className='mt-10 underline text-2xl font-bold dark:text-white'>
+    <h4 className="mt-10 lg:text-3xl font-bold text-gray-700 dark:text-white sm:text-lg">
       You are {age.years} years, {age.months} months, and {age.days} days old.
     </h4>
   );
