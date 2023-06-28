@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { PropTypes } from "prop-types";
 
-const AgeCalculatorForm = () => {
+const AgeCalculatorForm = ({ calculateAge }) => {
   const [birthDate, setBirthDate] = useState("");
   console.log(birthDate);
 
@@ -10,15 +11,21 @@ const AgeCalculatorForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("button sibmit");
+    calculateAge(birthDate);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input value={birthDate} type="date" onChange={handleChangeDate} />
-      <button type="submit">Calculate Age</button>
+      <button disabled={!birthDate} type="submit">
+        Calculate Age
+      </button>
     </form>
   );
 };
+
+AgeCalculatorForm.propTypes = {
+  calculateAge: PropTypes.func.isRequired,
+}
 
 export default AgeCalculatorForm;
